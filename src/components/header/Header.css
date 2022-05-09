@@ -73,6 +73,7 @@ span{
 .headerSearchInput {
   border: none;
   outline: none;
+  padding: 8px;
 }
 
 .headerSearchText {

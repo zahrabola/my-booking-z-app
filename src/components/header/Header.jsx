@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./Header.css";
 import { FaBed } from "react-icons/fa";
 import { FaPlane } from "react-icons/fa";
@@ -6,9 +6,21 @@ import { FaCar } from "react-icons/fa";
 import { FaLandmark } from "react-icons/fa";
 import { FaTaxi } from "react-icons/fa";
 import { FaCalendarDay } from "react-icons/fa";
-import { FaPeopleArrows} from "react-icons/fa";
+import { FaPeopleArrows } from "react-icons/fa";
+import { DateRange } from "react-date-range";
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+
 
 const Header = () => {
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
+
   return (
     <div className="header">
       <div className="headerContainer listmode">
@@ -59,6 +71,14 @@ const Header = () => {
               <FaCalendarDay size="1.3em" />
             </div>
             <span className="headerSearchText">date to date</span>
+            <DateRange
+              editableDateInputs={true}
+              onChange={(item) => setDate([item.selection])}
+              moveRangeOnFirstSelection={false}
+              ranges={date}
+              className="date"
+              minDate={new Date()}
+            />
           </div>
           <div className="headerSearchItem">
             <div className="headericon">
