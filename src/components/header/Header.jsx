@@ -14,6 +14,7 @@ import { format } from "date-fns";
 
 
 const Header = () => {
+  const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -71,18 +72,23 @@ const Header = () => {
             <div className="headericon">
               <FaCalendarDay size="1.3em" />
             </div>
-            <span className="headerSearchText">{`${format(
-              date[0].startDate,
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="headerSearchText"
+            >{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(
+              date[0].endDate,
               "dd/MM/yyyy"
-            )}to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
-            <DateRange
-              editableDateInputs={true}
-              onChange={(item) => setDate([item.selection])}
-              moveRangeOnFirstSelection={false}
-              ranges={date}
-              className="date"
-              minDate={new Date()}
-            />
+            )}`}</span>
+            {openDate && (
+              <DateRange
+                editableDateInputs={true}
+                onChange={(item) => setDate([item.selection])}
+                moveRangeOnFirstSelection={false}
+                ranges={date}
+                className="date"
+                minDate={new Date()}
+              />
+            )}
           </div>
           <div className="headerSearchItem">
             <div className="headericon">
