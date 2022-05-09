@@ -1,0 +1,31 @@
+.navbar{
+    height: 60px;
+     background-color: #008080;
+  display: flex;
+  justify-content: center;
+}
+.navcontainer{
+    width: 100%;
+    max-width: 1024px;
+    color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: 400;
+
+}
+.navbtn{
+      margin-left: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #008080;
+  border-radius: 30%;
+}
+.navbtn:hover{
+      color: azure;
+      background-color: #008080;
+      cursor: pointer;
+}
