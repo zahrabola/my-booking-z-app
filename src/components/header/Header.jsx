@@ -10,6 +10,7 @@ import { FaPeopleArrows } from "react-icons/fa";
 import { DateRange } from "react-date-range";
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { format } from "date-fns";
 
 
 const Header = () => {
@@ -70,7 +71,10 @@ const Header = () => {
             <div className="headericon">
               <FaCalendarDay size="1.3em" />
             </div>
-            <span className="headerSearchText">date to date</span>
+            <span className="headerSearchText">{`${format(
+              date[0].startDate,
+              "dd/MM/yyyy"
+            )}to ${format(date[0].endDate, "dd/MM/yyyy")}`}</span>
             <DateRange
               editableDateInputs={true}
               onChange={(item) => setDate([item.selection])}

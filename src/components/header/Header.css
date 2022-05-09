@@ -88,3 +88,8 @@ span{
     border-radius: 20px;
       cursor: pointer;
  }
+ .date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
