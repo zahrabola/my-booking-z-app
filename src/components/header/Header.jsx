@@ -3,51 +3,76 @@ import "./Header.css";
 import { FaBed } from "react-icons/fa";
 import { FaPlane } from "react-icons/fa";
 import { FaCar } from "react-icons/fa";
-import { FaLandmark} from "react-icons/fa";
+import { FaLandmark } from "react-icons/fa";
 import { FaTaxi } from "react-icons/fa";
+import { FaCalendarDay } from "react-icons/fa";
+import { FaPeopleArrows} from "react-icons/fa";
 
 const Header = () => {
   return (
     <div className="header">
-      Header
-      <div className="headerList">
-        <div className="headerListItem">
-          <div className="icon">
-            <FaBed />
-            <span>Stays</span>
-          </div>
-          <div className="icon">
-            <FaPlane />
-            <span>Fligts</span>
-          </div>
-          <div className="icon">
-            <FaCar />
-            <span>Car Rentals</span>
-          </div>
-          <div className="icon">
-            <FaLandmark />
-            <span>Attractions</span>
-          </div>
-          <div className="icon">
-            <FaTaxi />
-            <span>Airport Taxi</span>
+      <div className="headerContainer listmode">
+        <div className="headerList">
+          <div className="headerListItem ">
+            <div className="icon active">
+              <FaBed />
+              <span>Stays</span>
+            </div>
+            <div className="icon">
+              <FaPlane />
+              <span>Fligts</span>
+            </div>
+            <div className="icon">
+              <FaCar />
+              <span>Car Rentals</span>
+            </div>
+            <div className="icon">
+              <FaLandmark />
+              <span>Attractions</span>
+            </div>
+            <div className="icon">
+              <FaTaxi />
+              <span>Airport Taxi</span>
+            </div>
           </div>
         </div>
+        <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
+        <p className="headerDescription">
+          Get rewarded for your travels – Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit.
+        </p>
+        <button className="headerBtn">Sign in / Register</button>
 
-
-
-
-
-
-        
+        <div className="headerSearch">
+          <div className="headerSearchItem">
+            <div className="headericon">
+              <FaBed size="1.3em" />
+            </div>
+            <input
+              type="text"
+              placeholder="Searching"
+              className="headerSearchInput"
+            />
+          </div>
+          <div className="headerSearchItem">
+            <div className="headericon">
+              <FaCalendarDay size="1.3em" />
+            </div>
+            <span className="headerSearchText">date to date</span>
+          </div>
+          <div className="headerSearchItem">
+            <div className="headericon">
+              <FaPeopleArrows size="1.3em" />
+            </div>
+            <span className="headerSearchText">2 adults 2 children 1 room</span>
+          </div>
+          <div className="headerSearchItem">
+            <button className="headerBtn2">Search</button>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Header;
-
-
-
-
-
