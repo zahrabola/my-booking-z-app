@@ -4,12 +4,13 @@
   gap: 20px;
   z-index: 1;
   position: relative;
+  margin: 30px;
 }
 
 .featurecard{
  position: relative;
   color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   height: 250px;
   flex:1
@@ -18,7 +19,7 @@
       width: 100%;
   height: 100%;
   object-fit: cover;
- margin: 20px;
+
 }
 .featureTitle{
   position: absolute;
