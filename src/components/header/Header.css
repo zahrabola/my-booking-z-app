@@ -74,6 +74,7 @@ span{
   border: none;
   outline: none;
   padding: 8px;
+   border-radius: 10px;
 }
 
 .headerSearchText {
