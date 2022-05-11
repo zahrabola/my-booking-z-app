@@ -5,6 +5,7 @@ import { DateRange } from "react-date-range";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
 import "./List.css";
+import SearchItem from "../../components/searchitem/SearchItem";
 
 
 
@@ -69,20 +70,45 @@ const List = () => {
                 </div>
                 <div className="listoptionitem">
                   <span className="optiontext">Adult</span>
-                  <input type="number" className="listoptioninput" />
+                  <input
+                    type="number"
+                    min={1}
+                    placeholder={options.adult}
+                    className="listoptioninput"
+                  />
                 </div>
                 <div className="listoptionitem">
                   <span className="optiontext">Children</span>
-                  <input type="number" className="listoptioninput" />
+                  <input
+                    type="number"
+                    min={0}
+                    placeholder={options.children}
+                    className="listoptioninput"
+                  />
                 </div>
                 <div className="listoptionitem">
                   <span className="optiontext">Room</span>
-                  <input type="number" className="listoptioninput" />
+                  <input
+                    type="number"
+                    min={1}
+                    placeholder={options.room}
+                    className="listoptioninput"
+                  />
                 </div>
               </div>
             </div>
             <button className="btn-search">Search</button>
-            <div className="listresult"></div>
+          </div>
+          <div className="listresult">
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
           </div>
         </div>
       </div>
