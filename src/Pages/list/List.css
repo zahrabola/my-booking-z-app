@@ -1,0 +1,40 @@
+.listcontainer{
+     display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.list-wrapper{
+      width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+.listsearch{
+      flex: 1;
+  background-color: #febb02;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+.listtitle{
+      font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.listitem{
+      display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.listitem > label{
+      font-size: 12px;
+}
+.listitem > input{
+      height: 30px;
+  border: none;
+  padding: 5px;
+   border-radius: 10px;
+}
