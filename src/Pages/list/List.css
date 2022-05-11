@@ -1,10 +1,12 @@
 .listcontainer{
-     display: flex;
-  justify-content: center;
+ display: flex;
+  justify-content: left;
   margin-top: 20px;
+  margin-left: 20px;
+  padding: 20px;
 }
 .list-wrapper{
-      width: 100%;
+      width: 30%;
   max-width: 1024px;
   display: flex;
   gap: 20px;
@@ -24,7 +26,7 @@
   margin-bottom: 10px;
 }
 .listitem{
-      display: flex;
+     display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 10px;
@@ -36,5 +38,19 @@
       height: 30px;
   border: none;
   padding: 5px;
+    background-color: azure;
    border-radius: 10px;
+}
+.listitem > span{
+      height: 30px;
+  padding: 5px;
+  background-color: azure;
+   border-radius: 10px;
+    color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.listresult{
+    flex: 3;
 }
