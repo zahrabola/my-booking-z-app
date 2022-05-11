@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Featured from "../../components/featured/Featured";
 import Propertylist from "../../components/propertyList/Propertylist";
 import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
+import MailList from "../../components/mailList/MailList";
 import "./Home.css";
 
 const Home = () =>{
@@ -17,8 +18,10 @@ const Home = () =>{
           <Propertylist />
           <h1 className="homeTitle">Homes guests love</h1>
           <FeaturedProperties />
+           <MailList/>
+           </div>
         </div>
-      </div>
+      
     );
 }
 export default Home;
