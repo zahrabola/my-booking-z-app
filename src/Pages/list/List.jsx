@@ -57,6 +57,12 @@ const List = () => {
               <div className="listoptions">
                 <div className="listoptionitem">
                   <span className="optiontext">
+                    Min Price <small> per night</small>
+                  </span>
+                  <input type="number" className="listoptioninput" />
+                </div>
+                <div className="listoptionitem">
+                  <span className="optiontext">
                     Max Price <small> per night</small>
                   </span>
                   <input type="number" className="listoptioninput" />
@@ -75,7 +81,7 @@ const List = () => {
                 </div>
               </div>
             </div>
-            <button>Search</button>
+            <button className="btn-search">Search</button>
             <div className="listresult"></div>
           </div>
         </div>

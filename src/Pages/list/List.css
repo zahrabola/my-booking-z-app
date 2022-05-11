@@ -51,6 +51,35 @@
   align-items: center;
   cursor: pointer;
 }
+.listoptions{
+    padding: 20px;
+}
+.listoptionitem{
+     display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+.listoptioninput{
+      width: 50px;
+}
+.btn-search{
+       background-color: #01a7a7;
+  color: azure;
+  border: none;
+  padding: 10px;
+    border-radius: 20px;
+      cursor: pointer;
+}
+.listsearch{
+      padding: 10px;
+  color: azure;
+  border: none;
+  width: 100%;
+  font-weight: 200;
+  cursor: pointer;
+}
 .listresult{
     flex: 3;
 }
