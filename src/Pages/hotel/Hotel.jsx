@@ -48,21 +48,25 @@ const handleOpen =(i) =>{
         {open && (
           <div className="slider">
             <div className="hotelicon">
-              <FaTrash size="1.3em" />
+              <FaTrash
+                size="1.3em"
+                className="close"
+                onClick={() => setOpen(false)}
+              />
             </div>
             <div className="hotelicon">
-              <FaArrowAltCircleLeft size="1.3em" />
+              <FaArrowAltCircleLeft size="1.3em" className="arrow"/>
             </div>
             <div className="sliderwrapper">
+              <img src={photos[SlideNumber].src} alt="" className="sliderimg" />
               <div className="hotelicon">
-                <FaArrowAltCircleRight size="1.3em" />
+                <FaArrowAltCircleRight size="1.3em" className="arrow" />
               </div>
             </div>
           </div>
         )}
 
         <div className="hotelwrapper">
-          
           <button className="hotel-button">Reserve or Book Now!</button>
           <h1 className="hoteltitle">Tower Street Apartments</h1>
           <div className="hoteladress">
@@ -81,7 +85,7 @@ const handleOpen =(i) =>{
             {photos.map((photo, i) => (
               <div className="hotelimgwrapper" key={i}>
                 <img
-                  onClick={() => handleOpen (i)}
+                  onClick={() => handleOpen(i)}
                   src={photo.src}
                   alt=""
                   className="hotelimg"
