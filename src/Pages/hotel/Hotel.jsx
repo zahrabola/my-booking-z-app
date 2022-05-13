@@ -8,24 +8,25 @@ import Footer from "../../components/footer/Footer";
 
 const Hotel = () => {
 
-const photos =[{
-  src:"https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  src:"https://images.pexels.com/photos/764827/pexels-photo-764827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  src:"https://images.pexels.com/photos/5615873/pexels-photo-5615873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  src:"https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  src:"https://images.pexels.com/photos/5615832/pexels-photo-5615832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-},
-{
-  src:"https://images.pexels.com/photos/1714975/pexels-photo-1714975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-},
+const photos = [
+  {
+    src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    src: "https://images.pexels.com/photos/764827/pexels-photo-764827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=11",
+  },
+  {
+    src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    src: "https://images.pexels.com/photos/5615832/pexels-photo-5615832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
 ];
 
 
@@ -38,7 +39,8 @@ const photos =[{
       <Header type="list" />
       <div className="hotelcontainer">
         <div className="hotelwrapper">
-          <h1 className="hoteltitle">London Hotel</h1>
+          <button className="hotel-button">Reserve or Book Now!</button>
+          <h1 className="hoteltitle">Tower Street Apartments</h1>
           <div className="hoteladress">
             <div className="hotelicon">
               <FaSearchLocation size="1.3em" />
@@ -52,13 +54,9 @@ const photos =[{
             Book a stay over £114 at this property and get a free airport taxi
           </span>
           <div className="hotelimgs">
-            {photos.map(photo=> (
+            {photos.map((photo) => (
               <div className="hotelimgwrapper">
-                <img 
-                
-                src={photo.src}
-                alt=""
-                 className="hotelimg" />
+                <img src={photo.src} alt="" className="hotelimg" />
               </div>
             ))}
           </div>

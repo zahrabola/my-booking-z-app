@@ -1,0 +1,79 @@
+.hotelcontainer{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.hotelwrapper{
+      width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.hotel-button{
+        background-color: #01a7a7;
+  color: azure;
+  border: none;
+  padding: 10px;
+    border-radius: 20px;
+}
+.hotel-button:hover{
+      background-color: azure;
+    color: #01a7a7 ;
+}
+.hoteltitle{
+     font-size: 24px;
+}
+.hoteladress{
+     font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hoteldistance{
+    color:  #008080;;
+  font-weight: 500;
+}
+.hotelPH{
+    color:  #008080;;
+  font-weight: 500;
+}
+.hotelimgs{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.hotelimgwrapper{
+      width: 33%;
+      height:auto;
+       
+}
+.hotelimg{
+      width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  padding: 10px;
+}
+.hoteldetail{
+      display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+.hotel-DT{
+     flex: 3;
+}
+.hoteldescription{
+     font-size: 14px;
+  margin-top: 20px;
+}
+.hotel-DP{
+      flex: 1;
+  background-color: azure;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
