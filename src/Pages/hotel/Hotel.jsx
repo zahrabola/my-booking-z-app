@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Hotel.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import { FaSearchLocation } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaSearchLocation, FaTrash} from "react-icons/fa";
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 
 const Hotel = () => {
+const [SlideNumber, setSlideNumber] = useState(0)
+  const [open, setOpen] = useState(false);
 
 const photos = [
   {
@@ -29,6 +31,11 @@ const photos = [
   },
 ];
 
+const handleOpen =(i) =>{
+  setSlideNumber(i);
+  setOpen(true);
+}
+
 
 
 
@@ -38,7 +45,24 @@ const photos = [
       <Navbar />
       <Header type="list" />
       <div className="hotelcontainer">
+        {open && (
+          <div className="slider">
+            <div className="hotelicon">
+              <FaTrash size="1.3em" />
+            </div>
+            <div className="hotelicon">
+              <FaArrowAltCircleLeft size="1.3em" />
+            </div>
+            <div className="sliderwrapper">
+              <div className="hotelicon">
+                <FaArrowAltCircleRight size="1.3em" />
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="hotelwrapper">
+          
           <button className="hotel-button">Reserve or Book Now!</button>
           <h1 className="hoteltitle">Tower Street Apartments</h1>
           <div className="hoteladress">
@@ -54,9 +78,14 @@ const photos = [
             Book a stay over £114 at this property and get a free airport taxi
           </span>
           <div className="hotelimgs">
-            {photos.map((photo) => (
-              <div className="hotelimgwrapper">
-                <img src={photo.src} alt="" className="hotelimg" />
+            {photos.map((photo, i) => (
+              <div className="hotelimgwrapper" key={i}>
+                <img
+                  onClick={() => handleOpen (i)}
+                  src={photo.src}
+                  alt=""
+                  className="hotelimg"
+                />
               </div>
             ))}
           </div>
