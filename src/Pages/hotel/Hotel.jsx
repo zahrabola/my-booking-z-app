@@ -2,43 +2,54 @@ import React, { useState } from "react";
 import "./Hotel.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaSearchLocation, FaTrash} from "react-icons/fa";
+import {
+  FaArrowAltCircleLeft,
+  FaArrowAltCircleRight,
+  FaSearchLocation,
+  FaTrash,
+} from "react-icons/fa";
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 
 const Hotel = () => {
-const [SlideNumber, setSlideNumber] = useState(0)
+  const [SlideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
-const photos = [
-  {
-    src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    src: "https://images.pexels.com/photos/764827/pexels-photo-764827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=11",
-  },
-  {
-    src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    src: "https://images.pexels.com/photos/5615832/pexels-photo-5615832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-];
+  const photos = [
+    {
+      src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/764827/pexels-photo-764827.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=11",
+    },
+    {
+      src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/5615832/pexels-photo-5615832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+    {
+      src: "https://images.pexels.com/photos/1262493/pexels-photo-1262493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    },
+  ];
 
-const handleOpen =(i) =>{
-  setSlideNumber(i);
-  setOpen(true);
-}
+  const handleOpen = (i) => {
+    setSlideNumber(i);
+    setOpen(true);
+  };
 
-
-
-
+  const handleMove = (direction) => {
+    let newSlideNumber;
+    if (direction === "1") {
+      newSlideNumber = SlideNumber === 0 ? 5 : SlideNumber - 1;
+    } else {
+      newSlideNumber = SlideNumber === 5 ? 0 : SlideNumber + 1;
+    }
+    setSlideNumber(newSlideNumber);
+  };
 
   return (
     <div>
@@ -55,12 +66,20 @@ const handleOpen =(i) =>{
               />
             </div>
             <div className="hotelicon">
-              <FaArrowAltCircleLeft size="1.3em" className="arrow"/>
+              <FaArrowAltCircleLeft
+                size="1.3em"
+                className="arrow"
+                onClick={() => handleMove("l")}
+              />
             </div>
             <div className="sliderwrapper">
               <img src={photos[SlideNumber].src} alt="" className="sliderimg" />
               <div className="hotelicon">
-                <FaArrowAltCircleRight size="1.3em" className="arrow" />
+                <FaArrowAltCircleRight
+                  size="1.3em"
+                  className="arrow"
+                  onClick={() => handleMove("r")}
+                />
               </div>
             </div>
           </div>
