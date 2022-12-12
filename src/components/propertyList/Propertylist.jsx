@@ -8,6 +8,7 @@ const Propertylist =() =>{
        <img
          src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
          className="property-img"
+         alt="property1"
        />
        <div className="propertyTitle">
          <h1>Hotels</h1>
@@ -19,6 +20,7 @@ const Propertylist =() =>{
        <img
          src="https://images.pexels.com/photos/161599/scent-sticks-fragrance-aromatic-161599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
          className="property-img"
+         alt="property2"
        />
        <div className="propertyTitle">
          <h1>Spas</h1>
@@ -30,6 +32,7 @@ const Propertylist =() =>{
        <img
          src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
          className="property-img"
+         alt="property3"
        />
        <div className="propertyTitle">
          <h1>Apartments</h1>
@@ -41,6 +44,7 @@ const Propertylist =() =>{
        <img
          src="https://images.pexels.com/photos/2084291/pexels-photo-2084291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
          className="property-img"
+         alt="property4"
        />
        <div className="propertyTitle">
          <h1> Canal boats</h1>
@@ -52,6 +56,7 @@ const Propertylist =() =>{
        <img
          src="https://images.pexels.com/photos/803975/pexels-photo-803975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
          className="property-img"
+         alt="property5"
        />
        <div className="propertyTitle">
          <h1>Cabins</h1>
